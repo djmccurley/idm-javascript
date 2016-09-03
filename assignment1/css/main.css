@@ -1,0 +1,88 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	font-family: serif;
+}
+
+p, h1, h2 {
+	margin: 0;
+}
+.coupon {
+	width: 648px;
+	margin: auto;
+	color: #fff;
+}
+
+.coupon header {
+	background-color: #c93042;
+	text-align: center;
+}
+
+.coupon header p {
+	font-size: 2.25em;
+	padding-top: .25em;
+	font-weight: bold;
+}
+
+.coupon header h1 {
+	font-size: 3.5em;
+	padding-bottom: .25em;
+}
+
+.content {
+	background-image: url("../img/bg.jpg");
+	height: 265px;
+	position: relative;
+}
+
+.copy {
+	width: 220px;
+	position: absolute;
+	right: 6%;
+	bottom: 6%;
+	font-family: sans-serif;
+}
+
+.copy h2 {
+	font-size: 1.2em;
+	margin-bottom: .5em;
+}
+
+.copy p {
+	font-size: .85em;
+	margin-bottom: .75em;
+	line-height: 1.5em;
+}
+
+.cta-btn {
+	display: block;
+	position: relative;
+	font-family: serif;
+	padding: .2em 1.9em;
+	text-align: center;
+	background-color: #ffc5c1;
+	width: 160px;
+	margin: auto;
+	border-radius: 10px;
+	color: #592611;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.arrow-right {
+  width: 0; 
+  height: 0; 
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  
+  border-left: 13px solid #ea5338;
+  position: absolute;
+  right: 7%;
+  top: 25%;
+}
