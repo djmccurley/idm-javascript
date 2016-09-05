@@ -1,3 +1,6 @@
+/* Leveraged Paul Irish's border box solution:
+http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+
 html {
   box-sizing: border-box;
 }
@@ -12,6 +15,7 @@ body {
 p, h1, h2 {
 	margin: 0;
 }
+
 .coupon {
 	width: 648px;
 	margin: auto;
@@ -75,12 +79,14 @@ p, h1, h2 {
 	font-size: 1.2em;
 }
 
+/* arrow-right code leveraged from CSS-Tricks: 
+https://css-tricks.com/snippets/css/css-triangle/ */
+
 .arrow-right {
   width: 0; 
   height: 0; 
   border-top: 13px solid transparent;
-  border-bottom: 13px solid transparent;
-  
+  border-bottom: 13px solid transparent;  
   border-left: 13px solid #ea5338;
   position: absolute;
   right: 7%;
