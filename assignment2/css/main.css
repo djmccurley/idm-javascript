@@ -8,6 +8,26 @@ html {
   box-sizing: inherit;
 }
 
-body {
-	font-family: serif;
+.cardholder {
+  width: 33.33%;
+  min-width: 300px;
+  float: left;
+  padding: 3em;
+}
+
+.card {
+  border: 2px solid black;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.card img {
+  display: block;
+  margin: 1em auto;
+  width: 80%;
+}
+
+.card h1 {
+  text-align: center;
 }
