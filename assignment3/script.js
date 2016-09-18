@@ -6,4 +6,5 @@
 */
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
+  console.log('Hello World!');
 });
