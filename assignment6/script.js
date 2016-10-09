@@ -21,6 +21,9 @@ var churchillSpeech = {
     userNamePrompt,
     favoriteSpeechPrompt;
 
+var oldestYear = speechesArray[0].year;
+var newestYear = speechesArray[0].year;
+
 document.getElementById('BtnDonate').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Donate" button.
   favoriteSpeechPrompt = window.prompt('Which speech author is your favorite?');
@@ -49,8 +52,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
 });*/
 
 // this bit sets the variables of the oldest and newest speeches on the page
-var oldestYear = speechesArray[0].year;
-var newestYear = speechesArray[0].year;
+
 
 for(k=0; k < speechesArray.length; k++) {
   if (speechesArray[k].year < oldestYear) {
@@ -109,6 +111,7 @@ document.getElementById('BtnDemosthenes').addEventListener('click', function(){
   ageChecker(demosthenesSpeech.year);
 });
 
+// while loop
 var i = 0;
 
 while (i < speechesArray.length) {
