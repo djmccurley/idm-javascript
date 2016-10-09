@@ -48,6 +48,7 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   }
 });*/
 
+// this bit sets the variables of the oldest and newest speeches on the page
 var oldestYear = speechesArray[0].year;
 var newestYear = speechesArray[0].year;
 
@@ -59,8 +60,15 @@ for(k=0; k < speechesArray.length; k++) {
   }
 }
 
-console.log('oldest speech =' + oldestYear);
-console.log('newest speech = ' + newestYear);
+//this function checks the speech against the oldestYear/newestYear variables
+function ageChecker(speechYear) {
+  if (speechYear === oldestYear) {
+    console.log('This is the oldest speech on the page.');
+  } else if (speechYear === newestYear) {
+    console.log('This is the most recent speech on the page.');
+  }
+}
+
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
