@@ -48,6 +48,20 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   }
 });*/
 
+var oldestYear = speechesArray[0].year;
+var newestYear = speechesArray[0].year;
+
+for(k=0; k < speechesArray.length; k++) {
+  if (speechesArray[k].year < oldestYear) {
+    oldestYear = speechesArray[k].year;
+  } else if (speechesArray[k].year > newestYear) {
+    newestYear = speechesArray[k].year;
+  }
+}
+
+console.log('oldest speech =' + oldestYear);
+console.log('newest speech = ' + newestYear);
+
 document.getElementById('BtnChurchill').addEventListener('click', function(){
   //Code in here executes when the user clicks the "Churchill" button.
   console.log('This speech was written by ' + speechesArray[0].author + ' in ' + speechesArray[0].year);
