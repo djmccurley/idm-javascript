@@ -1,0 +1,60 @@
+/* here is the exercise part */
+#ghost {
+  position: relative;
+  width: 15vw;
+  height: 15vw;
+  background-color: #FEA1CD;
+  transition: all 0.4s ease;
+  border-radius: 50% 50% 0% 0%;
+  margin: 10vw 5vw 5vw 10vw;
+}
+
+#ghost.clicked {
+  transition: all 0.4s ease;
+  background-color: #2800FF;
+  margin-left: 75vw;
+}
+
+/* pacman styles */
+
+body {
+  background-color: #000;
+}
+
+.maze {
+  border: .5vw solid #2800FF;
+  margin-top: 5vh;
+}
+.eye {
+  width: 10%;
+  height: 10%;
+  background: #fff;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+
+.eye:nth-of-type(2) {
+    left: 60%;
+}
+
+.jag, .jag2, .jag3, .jag4 {
+  width: 10%;
+  height: 10%;
+  background: #000;
+  position: absolute;
+  top: 90%;
+  left: 10%;
+}
+
+.jag2 {
+  left: 33%;
+}
+
+.jag3 {
+  left: 57%;
+}
+
+.jag4 {
+  left: 80%;
+}
