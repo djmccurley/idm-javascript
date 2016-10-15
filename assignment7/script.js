@@ -32,9 +32,13 @@ document.getElementById('BtnDonate').addEventListener('click', function(){
   } else if(donation >= 100) {
       var newHeader = document.createElement("h3");
       var newText = document.createTextNode('Thank you for your very generous donation!');
+      var articlesArray = document.getElementsByTagName("article");
       newHeader.appendChild(newText);
       newHeader.setAttribute("style", "color:red");
       document.getElementById("SideNav").appendChild(newHeader);
+      for(i=0; i<articlesArray.length; i++) {
+        articlesArray[i].className = "generous-donation";
+      }
     }
 });
 
