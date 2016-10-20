@@ -4,7 +4,8 @@ function makeBoxes(num) {
   } else {
       document.getElementById("box-holder").innerHTML = "";  
       for(var i=1; i<=num; i++){
-        document.getElementById("box-holder").innerHTML += "<div><p>" + i + "</p></div>";
+        document.getElementById("box-holder").innerHTML += 
+          "<div><p>" + i + "</p></div>";
       }
     }  
 }
