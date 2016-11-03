@@ -5,6 +5,27 @@ $(document).ready(function () {
 	$("[data-type='proteinbar']").css("background", "#9b42f4");
 
 	//assignment 10.2 - hide/display products on checkbox selection
-
-	
+	//:checked property solution found here: http://stackoverflow.com/questions/2834350/get-checkbox-value-in-jquery
+	//.parent, .hide solutions from jQuery API documentation
+	$('#proteinbar').click(function() {
+		if($('#proteinbar').is(':checked')) {
+			$("[data-type='proteinbar']").parent().show();
+		} else {
+			$("[data-type='proteinbar']").parent().hide();
+		}
+	});	
+	$('#mineralwater').click(function() {
+		if($("#mineralwater").is(':checked')) {
+			$("[data-type='mineralwater']").parent().show();
+		} else {
+			$("[data-type='mineralwater']").parent().hide();
+		}
+	});	
+	$('#vitamin').click(function() {
+		if($('#vitamin').is(':checked')) {
+			$("[data-type='vitamin']").parent().show();
+		} else {
+			$("[data-type='vitamin']").parent().hide();
+		}
+	});	
 });
