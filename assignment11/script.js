@@ -15,4 +15,14 @@ $(document).ready(function() {
 	$("#content h2").click(function() {
 		$("#content").html("<img src='chuckles.jpg'><h2>Great Job!</h2>");
 	});
+	/* 	toggle sidebar lists - I was all ready to use .detach and all
+			that on this one, but turns out .toggle() without any arguments
+			toggles visibility by default! http://api.jquery.com/toggle/ 
+	*/		
+	$("#sidebar_content_1 h2").click(function() {
+		$(this).siblings().toggle();
+	});
+	$("#sidebar_content_2 h2").click(function() {
+		$(this).siblings().toggle();
+	});
 });
