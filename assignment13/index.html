@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+	<head lang="en">
+		<title>Box Factory 2.0</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body>
+		<div class="app_wrapper clearfix">
+			<div class="interface"> 
+				<header>
+					<h1>Box Factory 2.0</h1>
+					<p>Enter order details below</p>
+				</header>
+				<div class="controls">
+					<div class="control_module">
+						<h2>How Many Boxes?</h2>
+						<input id="quantity" placeholder="Enter a number 0 - 2000">
+					</div>
+					<div class="control_module">
+						<h2>What color?</h2>
+						  <select name="color" id="color">
+						    <option value="red">Red</option>
+						    <option value="blue">Blue</option>
+						    <option value="green">Green</option>
+						    <option value="yellow">Yellow</option>
+						    <option value="black">Black</option>
+						  </select>
+					</div>
+					<div class="control_module">
+						<h2>Cost</h2>
+						<input id="quantity" placeholder="Enter a price per box">
+					</div>										
+					<div class="control_module">
+						<button id="start">Ship Order</button>
+						<button>View Order History</button>
+					</div>
+				</div> <!-- controls -->
+			</div> <!-- interface -->
+			<div id="box-holder"></div>
+		</div><!-- app-wrapper -->
+	</body>
+
+	<script src="script.js"></script>
+</html>
