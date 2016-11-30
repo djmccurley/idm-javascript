@@ -14,12 +14,16 @@ html {
    clear: both;
 }
 
-* {
+/** {
   border: 1px solid pink;
-}
+}*/
 body {
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 15px;
+  background-color: #1E88E5;
+  padding-top: 2rem;
+  color: #424242;
+
 }
 
 .app_wrapper {
@@ -28,15 +32,45 @@ body {
 }
 
 .interface {
-  width: 30%;
+  width: 33%;
+  margin-right: 4%; 
   float: left;
 }
 
+.interface h2 {
+  font-size: 1.3rem;
+}
+
+.controls, #box-holder {
+  background-color: #eee;
+  box-shadow: 2px 2px 2px #1565C0;
+  border-radius: 1px;
+}
+
+.controls {
+  padding: 2rem;
+}
+
+.controls input, .controls select, .controls button {
+  font-size: .9rem;
+  width: 100%;
+}
+
+.controls button {
+  margin-top: 1rem;
+  padding: .5rem 0;
+  cursor: pointer;
+}
+
+h1 {
+  margin-top: 0;
+}
 
 #box-holder {
-  width: 70%;
+  width: 60%;
   float: left;
   padding: 2rem;
+  height: 100%;
 }
 
 #box-holder div {
@@ -55,13 +89,19 @@ body {
   margin-top: 10px;
 }
 
+#box-holder h3 {
+  color: black;
+}
+
 #history {
   display: none;
-  font-size: .8em;
-  padding: 1em;
-  height: 250px;
+  font-size: .9em;
+  padding: 2em;
+  max-height: 450px;
   overflow: scroll;
-  background-color: grey;
-  width:95%;
+  background-color: #fff;
+  color: #424242;
+  box-shadow: 1px 1px 1px #1565C0;
+  width:90%;
   margin: auto;
 }

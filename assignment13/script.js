@@ -1,13 +1,12 @@
 $(document).ready(function() {
   function makeBoxes(num, col, cost) {
-    if(isNaN(num)){
-      $("#box-holder").html("Please enter a valid number 1 - 1000");
+    if(isNaN(num) || (!num)){
+      $("#box-holder").html("<h3>Please enter a valid number 1 - 1000</h3>");
     } else if(num > 1000) {
-        $("#box-holder").html("Sorry, Box Union doesn't pay overtime! Orders must be 1000 boxes or less");
+        $("#box-holder").html("<h3>Sorry, Box Maker Union doesn't pay overtime! Orders must be 1000 boxes or less</h3>");
       } 
-        //had to specify range here to avoid condition running
-        //on undefined value for quantity
-        else if(num >=1 && num <= 1000) { 
+        //had to use boolean here to avoid this chunk running on undefined value
+        else if(num) { 
           $("#box-holder").html("");  
           for(var i=1; i<=num; i++){
             $("#box-holder").append("<div><p>" + i + "</p></div>");
