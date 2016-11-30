@@ -2,19 +2,19 @@ $(document).ready(function() {
   //function creates boxes or outputs error messages based on input from user
   //accepts 3 arguments - quantity of boxes, color, and cost per unit
   function makeBoxes(num, col, cost) {
-    var boxOutput = $("#box-slider"); //used in multiple places so stored in variable
-    if(isNaN(num) || (!num)){ //checks for non-numeric or undefined values
+    var boxOutput = $("#box-slider");   //used in multiple places so stored in variable
+    if(isNaN(num) || (!num)){   //checks for non-numeric or undefined values
       boxOutput.html("<h3>Invalid Amount</h3><p>Please enter a valid number 1 - 1000</p>");
-    } else if(num > 1000) { //checks for quantities over 1000 boxes
+    } else if(num > 1000) {   //checks for quantities over 1000 boxes
         boxOutput.html("<h3>Sorry, Box Maker Union doesn't pay overtime!</h3> <p>Orders must be 1000 boxes or less.</p>");
       } 
-        else if(num) { //probably don't need to use boolean anymore given !num above, but this one guards/guarded against weird inputs and blank orders
+        else if(num) {    //probably don't need to use boolean anymore given !num above, but this one guards/guarded against weird inputs and blank orders
           boxOutput.html("").css("display", "none");  //clears and hides box-slider from view while making boxes
-          for(var i=1; i<=num; i++){ //loop to create boxes based on num value (quantity)
-            boxOutput.append("<div class='box'><p>" + i + "</p></div>"); //appends div into box-slider div (same as +=)
+          for(var i=1; i<=num; i++){      //loop to create boxes based on num value (quantity)
+            boxOutput.append("<div class='box'><p>" + i + "</p></div>");    //appends div into box-slider div (same as +=)
           }
-          boxOutput.children().css("background-color", col); //colors boxes using col value
-          boxOutput.slideDown(800); //slides boxes into view
+          boxOutput.children().css("background-color", col);    //colors boxes using col value
+          boxOutput.slideDown(800);     //slides boxes into view
           //logs order summary to history div
           $("#history").prepend("<p>" + num + " " + col + " @ $" + cost + " each = $" + (num*cost) + "</p>");
         }  
