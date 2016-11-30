@@ -1,16 +1,17 @@
-function makeBoxes(num) {
-  if(isNaN(num)){
-    alert("Please enter a valid number!");
-  } else {
-      document.getElementById("box-holder").innerHTML = "";  
-      for(var i=1; i<=num; i++){
-        document.getElementById("box-holder").innerHTML += 
-          "<div><p>" + i + "</p></div>";
-      }
-    }  
-}
+$(document).ready(function() {
+  function makeBoxes(num) {
+    if(isNaN(num)){
+      alert("Please enter a valid number!");
+    } else {
+        $("#box-holder").html("");  
+        for(var i=1; i<=num; i++){
+          $("#box-holder").append("<div><p>" + i + "</p></div>");
+        }
+      }  
+  }
 
-document.getElementById("start").onclick = function() {
-  var boxes = prompt("How many boxes do you want?");
-  makeBoxes(boxes);
-}
+  $("#start").click(function() {
+    var boxes = prompt("How many boxes do you want?");
+    makeBoxes(boxes);
+  });
+});  
