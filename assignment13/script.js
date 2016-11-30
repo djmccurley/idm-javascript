@@ -2,9 +2,9 @@ $(document).ready(function() {
   function makeBoxes(num, col, cost) {
     var boxOutput = $("#box-slider");
     if(isNaN(num) || (!num)){
-      boxOutput.html("<h3>Please enter a valid number 1 - 1000</h3>");
+      boxOutput.html("<h3>Invalid Amount</h3><p>Please enter a valid number 1 - 1000</p>");
     } else if(num > 1000) {
-        boxOutput.html("<h3>Sorry, Box Maker Union doesn't pay overtime! Orders must be 1000 boxes or less</h3>");
+        boxOutput.html("<h3>Sorry, Box Maker Union doesn't pay overtime!</h3> <p>Orders must be 1000 boxes or less.</p>");
       } 
         //had to use boolean here to avoid this chunk running on undefined value
         else if(num) { 
@@ -13,7 +13,7 @@ $(document).ready(function() {
             boxOutput.append("<div class='box'><p>" + i + "</p></div>");
           }
           boxOutput.children().css("background-color", col);
-          boxOutput.slideDown();
+          boxOutput.slideDown(800);
           $("#history").prepend("<p>" + num + " " + col + " @ $" + cost + " each = $" + (num*cost) + "</p>");
         }  
 
