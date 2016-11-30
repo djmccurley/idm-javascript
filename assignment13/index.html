@@ -16,7 +16,7 @@
 				<div class="controls">
 					<div class="control_module">
 						<h2>How Many Boxes?</h2>
-						<input id="quantity" placeholder="Enter a number 0 - 1000">
+						<input id="quantity" value="" placeholder="Enter a number 1 - 1000">
 					</div>
 					<div class="control_module">
 						<h2>What color?</h2>
@@ -24,21 +24,29 @@
 						    <option value="red">Red</option>
 						    <option value="blue">Blue</option>
 						    <option value="green">Green</option>
-						    <option value="yellow">Yellow</option>
+						    <option value="Purple">Purple</option>
 						    <option value="black">Black</option>
 						  </select>
 					</div>
 					<div class="control_module">
-						<h2>Cost</h2>
-						<input id="quantity" placeholder="Enter a price per box">
+						<h2>Cost Per Box</h2>
+						  <select name="cost" id="cost">
+						    <option value="1">$1</option>
+						    <option value="2">$2</option>
+						    <option value="5">$5</option>
+						    <option value="10">$10</option>
+						    <option value="20">$20</option>
+						  </select>
 					</div>										
 					<div class="control_module">
 						<button id="start">Ship Order</button>
-						<button>View Order History</button>
+						<button id="view-history">View Order History</button>
 					</div>
 				</div> <!-- controls -->
+				<div id="history"></div>
 			</div> <!-- interface -->
-			<div id="box-holder"></div>
+			<div id="box-holder">
+			</div>
 		</div><!-- app-wrapper -->
 	</body>
 

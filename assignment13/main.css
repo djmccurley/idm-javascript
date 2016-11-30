@@ -54,3 +54,14 @@ body {
   padding: 0;
   margin-top: 10px;
 }
+
+#history {
+  display: none;
+  font-size: .8em;
+  padding: 1em;
+  height: 250px;
+  overflow: scroll;
+  background-color: grey;
+  width:95%;
+  margin: auto;
+}
