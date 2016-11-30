@@ -3,6 +3,7 @@ $(document).ready(function() {
   //accepts 3 arguments - quantity of boxes, color, and cost per unit
   function makeBoxes(num, col, cost) {
     var boxOutput = $("#box-slider");   //used in multiple places so stored in variable
+    var colorName = $("#color option:selected").attr("name");   //get name attribute of selected color - allows value to store hex code instead
     if(isNaN(num) || (!num)){   //checks for non-numeric or undefined values
       boxOutput.html("<h3>Invalid Amount</h3><p>Please enter a valid number 1 - 1000</p>");
     } else if(num > 1000) {   //checks for quantities over 1000 boxes
@@ -16,7 +17,7 @@ $(document).ready(function() {
           boxOutput.children().css("background-color", col);    //colors boxes using col value
           boxOutput.slideDown(800);     //slides boxes into view
           //logs order summary to history div
-          $("#history").prepend("<p>" + num + " " + col + " @ $" + cost + " each = $" + (num*cost) + "</p>");
+          $("#history").prepend("<p>" + num + " " + colorName + " @ $" + cost + " each = $" + (num*cost) + "</p>");
         }  
 
   }
