@@ -1,4 +1,4 @@
-var shiftValue = 13;
+var shiftValue = 15;
 var inputString = '';
 document.getElementById("input").onkeyup = function(){
 	inputString = document.getElementById("input").value.toUpperCase();	  
@@ -43,9 +43,9 @@ function decode(str) { // DECODER FUNCTION
     if(letterCode <= 64 || letterCode >= 91) {
       decodedValues.push(letterCode);
     } else if (letterCode > 64 && letterCode < 91) {
-	      shiftedLetterCode = letterCode + 1;
-	    		if(shiftedLetterCode > 90) {
-						shiftedLetterCode = 64 + (shiftedLetterCode - 90);
+	      shiftedLetterCode = letterCode - shiftValue;
+	    		if(shiftedLetterCode < 65) {
+						shiftedLetterCode = 90 - (64 - shiftedLetterCode);
 					}
 				decodedValues.push(shiftedLetterCode);	
 	    }    
