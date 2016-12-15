@@ -1,5 +1,12 @@
-var shiftValue = 15;
+var CodeKey = {
+	a: 12,
+	b: 14,
+	c: 16
+};
+var codeChannel;
+var shiftValue;
 var inputString = '';
+
 document.getElementById("input").onkeyup = function(){
 	inputString = document.getElementById("input").value.toUpperCase();	  
   if(document.getElementById('mode_encode').checked) {
@@ -13,6 +20,8 @@ function encode(str) { // ENCODER FUNCTION
   var encodedValues = [];
   var letterCode;
   var shiftedLetterCode;
+  codeChannel = document.getElementById('codeChannel').value;
+  shiftValue = CodeKey[codeChannel];
   
 	// iterates through str and pushes converted utf code to array
 	for(i=0; i<str.length; i++){
@@ -36,6 +45,8 @@ function decode(str) { // DECODER FUNCTION
   var decodedValues = [];
   var letterCode;
   var shiftedLetterCode;
+  codeChannel = document.getElementById('codeChannel').value;
+  shiftValue = CodeKey[codeChannel];
   
 	// iterates through str and pushes converted utf code to array
 	for(i=0; i<str.length; i++){
