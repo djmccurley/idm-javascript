@@ -1,15 +1,18 @@
-var outputString;
 var shiftValue = 13;
+var inputString = '';
 document.getElementById("input").onkeyup = function(){
-	outputString = document.getElementById("input").value.toUpperCase();	  
-  rot13(outputString);
+	inputString = document.getElementById("input").value.toUpperCase();	  
+  if(document.getElementById('mode_encode').checked) {
+  	encode(inputString);	
+  } else if(document.getElementById('mode_decode').checked) {
+  	decode(inputString);
+  }
 };
 
-function rot13(str) { // ENCODER FUNCTION
+function encode(str) { // ENCODER FUNCTION
   var encodedValues = [];
   var letterCode;
   var shiftedLetterCode;
-  var decodedString = '';
   
 	// iterates through str and pushes converted utf code to array
 	for(i=0; i<str.length; i++){
@@ -26,12 +29,40 @@ function rot13(str) { // ENCODER FUNCTION
 	} 
 	//logs resulting array to check accuracy  
   console.log(encodedValues);
+  return(updateDisplay(encodedValues));
+}
+
+function decode(str) { // DECODER FUNCTION
+  var decodedValues = [];
+  var letterCode;
+  var shiftedLetterCode;
+  
+	// iterates through str and pushes converted utf code to array
+	for(i=0; i<str.length; i++){
+    letterCode = str.charCodeAt(i);
+    if(letterCode <= 64 || letterCode >= 91) {
+      decodedValues.push(letterCode);
+    } else if (letterCode > 64 && letterCode < 91) {
+	      shiftedLetterCode = letterCode + 1;
+	    		if(shiftedLetterCode > 90) {
+						shiftedLetterCode = 64 + (shiftedLetterCode - 90);
+					}
+				decodedValues.push(shiftedLetterCode);	
+	    }    
+	} 
+	//logs resulting array to check accuracy  
+  console.log(decodedValues);
+  return(updateDisplay(decodedValues));
+}
+
 	//iterates through value of true utf codes - concatenates onto string  
-  for(j=0; j<encodedValues.length; j++) {
-    decodedString = decodedString + String.fromCharCode(encodedValues[j]);
+function updateDisplay(utfArray) { 
+	var outputString = '';	
+  for(j=0; j<utfArray.length; j++) {
+    outputString = outputString + String.fromCharCode(utfArray[j]);
   }  
-  console.log(decodedString);
-  document.getElementById("output").innerHTML = decodedString;  
+  console.log(outputString);
+  document.getElementById("output").innerHTML = outputString;  
 }
 
 
