@@ -7,15 +7,23 @@
 		<link rel="stylesheet" type="text/css" href="main.css">
 	</head>
 	<body>
-		<div class="app_wrapper">
+		<div class="app_wrapper clearfix">
 			<div class="control_panel">		
-				<h1>Codemaster 2000</h1>	
+				<div class="control_module">
+					<h1>Codemaster 1984</h1>	
+				</div>
 				<form class="controls">
 					<div class="control_module">
-						<input type="radio" name="mode" id="mode_encode" value="encode"> Encode
-					  <input type="radio" name="mode" id="mode_decode" value="decode"> Decode
+						<h2>Select Mode:</h2>
+						<div class="radio_wrapper">
+							<input type="radio" name="mode" id="mode_encode" class="radio" value="encode"> <label for-"mode_encode">Encode</label>
+						</div>
+						<div class="radio_wrapper">
+						  <input type="radio" name="mode" id="mode_decode" class="radio" value="decode"> <label for="mode_decode">Decode</label>
+						 </div> 
 					</div>  
-					<div class="control_module">	 	  
+					<div class="control_module">	 
+						<h2>Code Channel:</h2>	  
 						<select name="code_channel" id="codeChannel">
 						  <option value="a">Alpha</option>
 						  <option value="b">Bravo</option>

@@ -17,41 +17,132 @@ html {
 }
 
 body {
-	background-color: #322424;
+	background-color: #444;
 
 }
 
 .app_wrapper {
 	background-color: #607242;
 	width: 800px;
-	margin: 3rem auto;
+	margin: 1rem auto 0;
 	border-radius: 3px;
 	border-right: 5px solid rgba(63, 73, 43, .8);
 	border-bottom: 5px solid rgba(63, 73, 43, .8);
 	border-left: 5px solid rgba(114, 132, 78, .8);
 	border-top: 5px solid rgba(114, 132, 78, .8);
-	box-shadow: 0 0 0 3pt #1e2315;
+	box-shadow: 3pt 3pt 3pt 3pt #222;
 	padding: 1rem;
 	
 }
 
 .control_panel {
 	font-family: 'Black Ops One', sans-serif;
-	color: #f67033;
+	font-size: 110%;
+	width: 35%;
+	float: left;
+}
+
+.control_module {
+	padding: 1rem .75rem;
+	border-right: 5px solid rgba(63, 73, 43, .8);
+	border-bottom: 5px solid rgba(63, 73, 43, .8);
+	border-left: 5px solid rgba(114, 132, 78, .8);
+	border-top: 5px solid rgba(114, 132, 78, .8);
+	margin-bottom: 1rem;
+	box-shadow: 0pt 0pt 0pt 2px #000;
+	border-radius: 5px;
+
+}
+
+h1, h2 {
 	text-shadow: 2px 2px 0 #322424;
+	padding: 0;
+	margin: 0;
+	color: #bbb;
+}
+
+h2 {
+	margin-bottom: .75rem;
+}
+
+.radio_wrapper {
+	height: 3.5rem;
+	padding: 1rem .5rem;
+	font-size: 1.9rem;
+	line-height: 0;
+	background-color: #5e1b18;
+	color: #ee4639;
+	border-right: 5px solid rgba(51, 15, 13, .8);
+	border-bottom: 5px solid rgba(51, 15, 13, .8);
+	border-left: 5px solid rgba(238, 70, 57, .8);
+	border-top: 5px solid rgba(238, 70, 57, .8);
+	box-shadow: 0pt 0pt 0pt 2px #000;
+	font-family: 'VT323', monospace;
+	line-height: 0;
+	margin-bottom: 1rem;
+	border-radius: 5px;
+}
+
+input[type="radio"] {
+	display: inline-block;
+}
+
+
+#codeChannel {
+	width: 100%;
+	height: 3rem;
+	font-size: 1.9rem;
+	line-height: 0;
+	background-color: #5e1b18;
+	color: #ee4639;
+	border-right: 5px solid rgba(51, 15, 13, .8);
+	border-bottom: 5px solid rgba(51, 15, 13, .8);
+	border-left: 5px solid rgba(238, 70, 57, .8);
+	border-top: 5px solid rgba(238, 70, 57, .8);
+	box-shadow: 0pt 0pt 0pt 2px #000;
+	font-family: 'VT323', monospace;
+}
+
+.screens {
+	width: 65%;
+	float: left;
+	padding-left: 2rem;
+
+}
+textarea, #output {
+	width: 100%;
+	height: 200px;
+	outline: none;
 }
 
 textarea {
-	width: 400px;
-	height: 150px;
+	margin-bottom: 2rem;
+	border-right: 7px solid rgba(134, 158, 89, .8);
+	border-bottom: 7px solid rgba(134, 158, 89, .8);
+	border-left: 7px solid rgba(13, 15, 9, .8);
+	border-top: 7px solid rgba(13, 15, 9, .8);
+	background-color: #322424;
+	border-radius: 7px;
+	color: #8cc61a;
+	font-family: 'VT323', monospace;
+	font-size: 2.5rem;
+	padding: 1rem;
+
 }
 
 #output {
-	width: 400px;
-	height: 150px;
-	border: 1px solid red;
-	color: red;
+		border-radius: 7px;
+	font-family: 'VT323', monospace;
+	font-size: 2.5rem;
+	padding: 1rem;
+		background-color: #5e1b18;
+	border-left: 7px solid rgba(51, 15, 13, .8);
+	border-top: 7px solid rgba(51, 15, 13, .8);
+	border-right: 7px solid rgba(238, 70, 57, .6);
+	border-bottom: 7px solid rgba(238, 70, 57, .6);
+	color: #ee4639;
 }
+
 
 /* 
 
