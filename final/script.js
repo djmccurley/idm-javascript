@@ -1,3 +1,4 @@
+var clipboard = new Clipboard('.copy');
 var CodeKey = {
 	a: 12,
 	b: 14,
