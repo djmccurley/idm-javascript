@@ -41,7 +41,9 @@ document.getElementById("input").onkeyup = function(){
 	resulting array passed to updateDisplay function
 
 */
-function encode(str) { // ENCODER FUNCTION
+
+// ENCODER FUNCTION
+function encode(str) { 
   var encodedValues = [];
   var letterCode;
   var shiftedLetterCode;
@@ -68,7 +70,8 @@ function encode(str) { // ENCODER FUNCTION
   return(updateDisplay(encodedValues));
 }
 
-function decode(str) { // DECODER FUNCTION
+// DECODER FUNCTION
+function decode(str) {
   var decodedValues = [];
   var letterCode;
   var shiftedLetterCode;
@@ -96,7 +99,7 @@ function decode(str) { // DECODER FUNCTION
 }
 
 /*
-	Function iterates through value of true utf codes - concatenates onto string.
+	Function iterates through value of true utf codes & concatenates onto string.
 	Logs string for accuracy
 	Places string into DOM in output div
 	Updates href of twitter link with string  
