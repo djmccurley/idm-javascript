@@ -1,4 +1,11 @@
 textarea {
 	width: 400px;
-	height: 200px;
+	height: 150px;
+}
+
+#output {
+	width: 400px;
+	height: 150px;
+	border: 1px solid red;
+	color: red;
 }

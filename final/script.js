@@ -68,12 +68,14 @@ function decode(str) { // DECODER FUNCTION
 
 	//iterates through value of true utf codes - concatenates onto string  
 function updateDisplay(utfArray) { 
-	var outputString = '';	
+	var outputString = '';
+	var tweetData;
   for(j=0; j<utfArray.length; j++) {
     outputString = outputString + String.fromCharCode(utfArray[j]);
   }  
   console.log(outputString);
-  document.getElementById("output").innerHTML = outputString;  
+  document.getElementById("output").innerHTML = outputString;
+  document.getElementById("tweet").setAttribute("href", 'https://twitter.com/intent/tweet?text=' + outputString);  
 }
 
 

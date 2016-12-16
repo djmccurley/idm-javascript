@@ -11,12 +11,14 @@
 		<textarea id="input" name="input">Enter message here</textarea>
 	  <input type="radio" name="mode" id="mode_encode" value="encode"> Encode
 	  <input type="radio" name="mode" id="mode_decode" value="decode"> Decode
-	  <select name="code_channel" id="codeChannel">
+ 	  <select name="code_channel" id="codeChannel">
 		  <option value="a">Alpha</option>
 		  <option value="b">Bravo</option>
 		  <option value="c">Charlie</option>
 		</select>
-		<div id="output"></div>	
+		<div id="output"></div>
+		<a id="tweet" class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=I'm using Codemaster 2000!" title="Tweet this quote"><i class="fa fa-twitter"></i>Tweet Quote</a>	
 		<script src="jquery-3.1.1.min.js"></script>
+		<script src="clipboard.min.js"></script>
 		<script src="script.js"></script>
 	</body>
