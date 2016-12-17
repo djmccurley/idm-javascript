@@ -10,16 +10,16 @@
 		<div class="app_wrapper clearfix">
 			<div class="control_panel">		
 				<div class="control_module">
-					<h1>Codemaster 1984</h1>	
+					<h1>Codeboy 1.0</h1>	
 				</div>
 				<form class="controls">
 					<div class="control_module">
 						<h2>Select Mode:</h2>
 						<div class="radio_wrapper">
-							<input type="radio" name="mode" id="mode_encode" class="radio" value="encode"> <label for-"mode_encode">Encode</label>
+							<label><input type="radio" name="mode" id="mode_encode" class="radio" value="encode" checked> Encode</label>
 						</div>
 						<div class="radio_wrapper">
-						  <input type="radio" name="mode" id="mode_decode" class="radio" value="decode"> <label for="mode_decode">Decode</label>
+						  <label><input type="radio" name="mode" id="mode_decode" class="radio" value="decode"> Decode</label>
 						 </div> 
 					</div>  
 					<div class="control_module">	 
@@ -35,17 +35,15 @@
 			<div class="screens">		
 				<textarea id="input" name="input">Enter message here</textarea>
 				<div id="output"></div>
-			</div>
-			<div class="bottom">
-				<footer>
-
-				</footer>
-				<div class="share_buttons">
-					<a id="tweet" class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=I'm using Codemaster 2000!" title="Tweet this quote"><i class="fa fa-twitter"></i>Tweet Quote</a>
-					<a id="copy" class="button copy" href="#!" title="Copy to Clipboard" data-clipboard-target="#output">Copy to clipboard</a>	
+				<div class="share_buttons clearfix">
+					<a id="tweet" class="button twitter" target="_blank" href="https://twitter.com/intent/tweet?text=I'm using Codeboy 1.0!" title="Tweet this quote">Tweet</a>
+					<a id="copy" class="button copy" href="#!" title="Copy to Clipboard" data-clipboard-target="#output">Copy</a>	
 				</div> <!-- share_buttons -->
-			</div> <!-- bottom -->
+			</div>
 		</div> <!-- app_wrapper -->
+		<footer>
+			<p>&copy; <a href="http://djmccurley.com" target="_blank" title="djmccurley.com">Dan McCurley</a> – <a href="#!" id="about_link" title="About this Project">About</a> – <a href="#!" target="_blank" title="View project on GitHub">View on GitHub</a></p>
+		</footer>
 		<script src="jquery-3.1.1.min.js"></script>
 		<script src="clipboard.min.js"></script>
 		<script src="script.js"></script>
