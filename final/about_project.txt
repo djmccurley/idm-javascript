@@ -1,0 +1,27 @@
+ My final project for MCAD Web Dev: JS and jQuery is a web app that allows the user to encode and decode secret messages to send to their friends. It is geared towards kids and adults just for fun, with a heavy influence from 80's action movies, as well as the GI Joe cartoons.
+
+One of the challenges for freeCodeCamp was to write a function that translates an "encoded" string into plain English using a Caeser Cipher - ie. a code that offsets the letters of the alphabet by a certain number (A=P, B=Q, C=R, etc.) This original function is included in a comment in script.js.
+
+Using that similar process, I built a complete app with the following functionality:
+
+Core functions:
+
+User can enter text in English and get the output encoded with a Caeser Cipher (encode)
+
+User can enter an encoded message and receive the plain English output (decode)
+
+User can manually change the mode between ENCODE and DECODE
+
+User can tweet or copy the output to the clipboard
+
+User can change the "Code Channel" - ie. change the offset value of the code being used (A=P or A=Q or A=R) between a few options. This would let friends only speak on the same "channel"
+
+User can type in text and see the output live as they type (or relatively quickly after they type)
+
+I used the following technologies to build the app:
+
+HTML
+CSS/Sass
+Javascript
+jQuery
+clipboard.js
